@@ -20,7 +20,7 @@ const expandImg = document.querySelector('.expand img');
 // Events
 generateBtn.addEventListener('click',()=>{
     topBox.innerHTML="";
-
+    
     console.log(generateCounter.value);
 
     for (let i = 0; i < generateCounter.value; i++) {
@@ -77,9 +77,5 @@ function winningNumbers() {
     return winningNumbersArray.sort((a,b)=>a-b);
 }
 
-for (let i = 0; i < 5; i++) {
-    console.log(winningNumbers())
-}
-// console.log(winningNumbers())
-
+/
 

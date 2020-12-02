@@ -35,14 +35,13 @@ $corn:#FFF05A;
         padding-left: 24px;
         .row{
             width: 100%;
-            margin: 5px 0;
+            margin: 10px 0;
             display: flex;
             justify-content: space-around;
             align-items: center;
 
             .ball{
                 background-color: $orange-yellow;
-                // background-color: $corn;
                 width: 50px;
                 height: 50px;
                 display: flex;
@@ -87,14 +86,19 @@ $corn:#FFF05A;
            align-items: center;
 
            img{
-            // transform: rotate(0deg);
-            transition: all 1s;
+            transform: rotate(180deg);
+            transition: all 1s ease;
+
+          
            }
+
+           .rotate{
+            transform: rotate(0deg);
+            transition: all 1s ease; 
+        }
         }
 
-        .rotate{
-            transform: rotate(180deg);
-        }
+
 
         .generate{
       

@@ -39,7 +39,7 @@
 
 .container .bot-box__top .row {
   width: 100%;
-  margin: 5px 0;
+  margin: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,13 +101,17 @@
 }
 
 .container section .expand img {
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.container section .rotate {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.container section .expand .rotate {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .container section .generate {
