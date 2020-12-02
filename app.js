@@ -41,9 +41,6 @@ generateBtn.addEventListener('click',()=>{
 
 })
 
-expandImg.addEventListener('click',()=>{
-
-})
 
 expandBtn.addEventListener('click',()=>{
     options.classList.toggle('options__expand')
