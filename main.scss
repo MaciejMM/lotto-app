@@ -82,6 +82,18 @@ $corn:#FFF05A;
            right: 0;
            top: -40px;
            cursor: pointer;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           img{
+            // transform: rotate(0deg);
+            transition: all 1s;
+           }
+        }
+
+        .rotate{
+            transform: rotate(180deg);
         }
 
         .generate{
@@ -104,8 +116,8 @@ $corn:#FFF05A;
         .options{
             width:100%;
             background-color:$royal-blue-dark;
-            // height:0px;
-            height:150px;
+            height:0px;
+            // height:150px;
 
             transition: height 1s;
             display: flex;
@@ -117,7 +129,7 @@ $corn:#FFF05A;
 
             &__expand{
                 height: 150px;
-                
+               
             }
 
 

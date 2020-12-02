@@ -89,6 +89,25 @@
   right: 0;
   top: -40px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container section .expand img {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.container section .rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .container section .generate {
@@ -115,7 +134,7 @@
 .container section .options {
   width: 100%;
   background-color: #0a2463ff;
-  height: 150px;
+  height: 0px;
   -webkit-transition: height 1s;
   transition: height 1s;
   display: -webkit-box;

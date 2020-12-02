@@ -1,3 +1,12 @@
+// initial 
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
+
 // Selectors
 const topBox = document.querySelector('.bot-box__top');
 const generateBtn = document.querySelector('.gen-btn');
@@ -6,6 +15,7 @@ const options = document.querySelector('.options');
 const minusBtn = document.querySelector('.minus');
 const plusBtn = document.querySelector('.plus');
 const generateCounter = document.querySelector('.gen-counter');
+const expandImg = document.querySelector('.expand img');
 
 // Events
 generateBtn.addEventListener('click',()=>{
@@ -31,10 +41,13 @@ generateBtn.addEventListener('click',()=>{
 
 })
 
+expandImg.addEventListener('click',()=>{
 
+})
 
 expandBtn.addEventListener('click',()=>{
     options.classList.toggle('options__expand')
+    expandImg.classList.toggle('rotate')
 })
 
 minusBtn.addEventListener('click',()=>{
