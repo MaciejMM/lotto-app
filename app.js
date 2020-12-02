@@ -1,28 +1,48 @@
-
 // Selectors
 const topBox = document.querySelector('.bot-box__top');
 const generateBtn = document.querySelector('.gen-btn');
-
-
-
-
+const expandBtn = document.querySelector('.expand');
+const options = document.querySelector('.options');
+const minusBtn = document.querySelector('.minus');
+const plusBtn = document.querySelector('.plus');
+const generateCounter = document.querySelector('.gen-counter');
 
 // Events
 generateBtn.addEventListener('click',()=>{
-    let newRow = document.createElement('div')
-    newRow.setAttribute('class','row')
-    // Create
-    let num = document.createElement('div')
+    topBox.innerHTML="";
 
-    let generatedNumbers = winningNumbers()
-    generatedNumbers.forEach(element => {
-        let num = document.createElement('div')
-        num.setAttribute('class','ball')
-        num.innerText = element
-        newRow.appendChild(num)
-    });
+    console.log(generateCounter.value);
 
-    topBox.appendChild(newRow)
+    for (let i = 0; i < generateCounter.value; i++) {
+        let newRow = document.createElement('div')
+        newRow.setAttribute('class','row')
+        // Create
+        let generatedNumbers = winningNumbers()
+        generatedNumbers.forEach(element => {
+            let num = document.createElement('div')
+            num.setAttribute('class','ball')
+            num.innerText = element
+            newRow.appendChild(num)
+        });
+    
+        topBox.appendChild(newRow)
+        
+    }
+
+})
+
+
+
+expandBtn.addEventListener('click',()=>{
+    options.classList.toggle('options__expand')
+})
+
+minusBtn.addEventListener('click',()=>{
+    if(generateCounter.value>1)generateCounter.value--
+})
+
+plusBtn.addEventListener('click',()=>{
+    generateCounter.value++
 })
 
 

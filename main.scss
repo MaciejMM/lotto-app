@@ -30,32 +30,39 @@ $corn:#FFF05A;
         align-items: center;
         justify-content: center;
         overflow-y: auto;
-        padding-top: 40px;
+        padding: 50px 0;
+        padding-right: 24px;
+        padding-left: 24px;
         .row{
-            // margin: 5px 0;
-            
             width: 100%;
-            // height: 40px;
-            // background-color: $platinum;
             margin: 5px 0;
             display: flex;
             justify-content: space-around;
             align-items: center;
 
             .ball{
-                background-color: $corn;
+                background-color: $orange-yellow;
+                // background-color: $corn;
                 width: 50px;
                 height: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // padding: 10px;
                 font-size: 20px;
                 border-radius: 500px;
                 font-weight: bold;
                 
             }
+
         }
+
+        .row:nth-child(odd) .ball{
+            background-color: $corn;
+
+        }
+
+
+
     }
 
 
@@ -67,11 +74,22 @@ $corn:#FFF05A;
         background-color: $platinum;
         margin: 0 auto;
 
+        .expand{
+           position: absolute;
+           width: 40px;
+           height: 40px;
+           background-color: $orange-soda;
+           right: 0;
+           top: -40px;
+           cursor: pointer;
+        }
+
         .generate{
+      
             width: 100%;
             display: flex;
             justify-content: center;
-            border-top: 1px solid $platinum;
+            background-color: $platinum;
             button{
                 width: 90%;
                 height: 50px;
@@ -84,10 +102,44 @@ $corn:#FFF05A;
         }
 
         .options{
-            // height: 150px;
             width:100%;
-            background-color: skyblue;
+            background-color:$royal-blue-dark;
+            // height:0px;
+            height:150px;
+
+            transition: height 1s;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 5%;
+
+            &__expand{
+                height: 150px;
+                
+            }
+
+
+
+            button,
+            input{
+                flex-grow: 1;
+                height: 50px;
+                width: 100px; 
+                border-radius: 0;
+                border: none;
+                font-size: 36px;
+                text-align: center;
+            }   
+
+            button{
+                background-color: $orange-yellow;
+            }
+      
+
         }
+
     }
 
 
